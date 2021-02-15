@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '53glr@qajps^p49oct86onji21!c1+jo^!7(c!0#4hg%ke&2!$'
+import os
+SECRET_KEY = os.environ.get('DJANGO_POLL_APP_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
